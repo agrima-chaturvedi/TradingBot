@@ -1,0 +1,274 @@
+2025-06-21 20:07:27,587 — INFO — Initialized Binance Client with Testnet URL.
+2025-06-21 20:07:28,079 — ERROR — Binance API Exception: APIError(code=0): Invalid JSON error message from Binance: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Binance Spot Test Network</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/images/common/favicon.ico"/>
+    <style>
+html {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: BinancePlex, Arial, PingFangSC-Regular, 'Microsoft YaHei', sans-serif !important;
+}
+
+#header {
+    height: 64px;
+    background-color: #12161C;
+    margin: 0;
+    padding: 0;
+}
+
+#body {
+    display: flex;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 26px;
+}
+
+#footer {
+    background-color: #12161C;
+    font-size: 12px;
+    line-height: 16px;
+    color: #76808F;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 12px;
+}
+
+#logo {
+    position: absolute;
+    width: 120px;
+    height: 24px;
+    margin-right: 16px;
+    margin-left: 24px;
+    margin-top: 18px;
+    fill: #F0B90B;
+}
+
+#title {
+    position: absolute;
+    margin-right: 16px;
+    margin-left: 180px;
+    margin-top: 12px;
+    color: white;
+    font-size: 24px;
+}
+
+#login-state {
+    position: absolute;
+    top: 21px;
+    right: 110px;
+    color: white;
+}
+
+#logout {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #1890ff;
+}
+
+a:hover {
+    color: #40a9ff;
+}
+
+.block {
+    margin-bottom: 50px;
+}
+
+pre {
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+    font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+    font-size: 12px;
+    background-color: #f3f3f3 !important;
+    line-height: 18px;
+}
+
+form {
+    display: inline;
+}
+
+input[type='text'] {
+    border: 1px solid gray;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+input[type='submit'] {
+    border: none;
+    background: #F0B90B;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #d3d3d3;
+}
+
+thead {
+    font-size: 14px;
+    color: rgb(132, 142, 156);
+    text-align: left;
+}
+
+tbody tr:hover {
+    background: #f0f0f0;
+}
+
+th {
+    margin: 0;
+    padding: 5px 10px;
+    border: none;
+    background: #f2f2f2;
+}
+
+td {
+    margin: 0;
+    padding: 5px 10px;
+    border: 1px solid #d3d3d3
+}
+
+td.key-type {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+td.key-permissions {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 12px;
+}
+
+ul {
+    padding-inline-start: 20px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+textarea {
+    resize: none;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 12px;
+    width: 100%;
+}
+
+.error {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.note {
+    font-size: 12px;
+}
+
+.important {
+    color: red;
+}
+
+.back {
+    margin-top: 40px;
+}
+
+hr {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+li p {
+    margin: 0;
+}
+    </style>
+    <link href="/static/fonts/index.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header id="header">
+        <a href="/">
+            <svg id="logo" viewBox="0 0 5120 1024"><path d="M230.997333 512L116.053333 626.986667 0 512l116.010667-116.010667L230.997333 512zM512 230.997333l197.973333 197.973334 116.053334-115.968L512 0 197.973333 314.026667l116.053334 115.968L512 230.997333z m395.989333 164.992L793.002667 512l116.010666 116.010667L1024.981333 512l-116.992-116.010667zM512 793.002667l-197.973333-198.997334-116.053334 116.010667L512 1024l314.026667-314.026667-116.053334-115.968L512 793.002667z m0-165.973334l116.010667-116.053333L512 396.032 395.989333 512 512 626.986667z m1220.010667 11.946667v-1.962667c0-75.008-40.021333-113.024-105.002667-138.026666 39.978667-21.973333 73.984-58.026667 73.984-121.002667v-1.962667c0-88.021333-70.997333-145.024-185.002667-145.024h-260.992v561.024h267.008c126.976 0.981333 210.005333-51.029333 210.005334-153.002666z m-154.026667-239.957333c0 41.984-34.005333 58.965333-89.002667 58.965333h-113.962666V338.986667h121.984c52.010667 0 80.981333 20.992 80.981333 58.026666v2.005334z m31.018667 224c0 41.984-32.981333 61.013333-87.04 61.013333h-146.944v-123.050667h142.976c63.018667 0 91.008 23.04 91.008 61.013334v1.024z m381.994666 169.984V230.997333h-123.989333v561.024h123.989333v0.981334z m664.021334 0V230.997333h-122.026667v346.026667l-262.997333-346.026667h-114.005334v561.024h122.026667v-356.010666l272 356.992h104.96z m683.946666 0L3098.026667 228.010667h-113.962667l-241.024 564.992h127.018667l50.986666-125.994667h237.013334l50.986666 125.994667h130.005334z m-224.981333-235.008h-148.992l75.008-181.973334 73.984 181.973334z m814.037333 235.008V230.997333h-122.026666v346.026667l-262.997334-346.026667h-114.005333v561.024h122.026667v-356.010666l272 356.992h104.96z m636.970667-91.008l-78.976-78.976c-44.032 39.978667-83.029333 65.962667-148.010667 65.962666-96 0-162.986667-80-162.986666-176v-2.986666c0-96 67.968-174.976 162.986666-174.976 55.978667 0 100.010667 23.978667 144 62.976l78.976-91.008c-51.968-50.986667-114.986667-86.997333-220.970666-86.997334-171.989333 0-292.992 130.986667-292.992 290.005334V512c0 160.981333 122.965333 288.981333 288 288.981333 107.989333 1.024 171.989333-36.992 229.973333-98.986666z m527.018667 91.008v-109.994667h-305.024v-118.016h265.002666v-109.994667h-265.002666V340.992h301.013333V230.997333h-422.997333v561.024h427.008v0.981334z"></path></svg>
+        </a>
+        <div id="title">Spot Test Network</div>
+    </header>
+    <div id="body">
+        <main id="content">
+            <div class="block">
+                <h2>
+                    Something bad happened :(
+                </h2>
+            </div>
+            
+            <div class="back">
+                <a href="/">Back</a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer">
+        <a href="/terms">Terms</a>
+        |
+        <a href="/privacy">Privacy</a>
+        |
+        &copy; 2017 -  Binance.com. All rights reserved
+    </footer>
+</body>
+</html>
+<!-- request_id:  -->
+2025-06-21 20:08:40,066 — INFO — Initialized Binance Client with Testnet URL.
+2025-06-21 20:08:40,605 — ERROR — Binance API Exception: APIError(code=None): None
+2025-06-21 20:11:12,128 — INFO — Initialized Binance Client with Futures Testnet URL.
+2025-06-21 20:11:12,603 — ERROR — Binance API Exception: APIError(code=None): None
+2025-06-21 20:16:38,926 — INFO — \u2705 Initialized Binance Futures Testnet client.
+2025-06-21 20:16:39,446 — ERROR — \u274c Binance API Exception: APIError(code=None): None
+2025-06-21 20:17:14,139 — INFO — \u2705 Initialized Binance Futures Testnet client.
+2025-06-21 20:17:14,550 — ERROR — \u274c Binance API Exception: APIError(code=None): None
+2025-06-21 20:19:56,878 - INFO - Initialized Binance Futures Testnet client.
+2025-06-21 20:19:57,540 - ERROR - Binance API Error: None
+2025-06-21 20:20:08,849 - INFO - Initialized Binance Futures Testnet client.
+2025-06-21 20:20:09,258 - ERROR - Binance API Error: None
+2025-06-21 20:22:20,986 - INFO - Initialized Binance Futures Testnet client.
+2025-06-21 20:22:21,444 - ERROR - Binance API Error: None
+2025-06-21 20:22:53,473 - INFO - Initialized Binance Futures Testnet client.
+2025-06-21 20:22:54,119 - ERROR - Binance API Error: None
+2025-06-21 20:25:13,420 - ERROR - Binance API Error: Invalid API-key, IP, or permissions for action
+2025-06-21 20:29:43,462 - INFO - Initialized Binance Futures Testnet client.
+2025-06-21 20:29:43,965 - ERROR - Binance API Exception: APIError(code=None): None
+2025-06-21 20:31:58,523 - INFO - âœ… Initialized Binance Futures Testnet client.
+2025-06-21 20:31:59,129 - INFO - âœ… Order placed successfully: {'orderId': 4578457423, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ6e32704b8b4d13ba018ee0', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.001', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750518118670}
+2025-06-21 23:10:25,833 - INFO - Initialized Binance Futures Testnet client.
+2025-06-21 23:10:26,383 - INFO - Order placed successfully: {'orderId': 4579133700, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ423ded7c1a34cdb2080e52', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.010', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750527625396}
+2025-06-22 00:10:03,362 - INFO - Initialized Binance Futures Testnet client.
+2025-06-22 00:11:15,047 - INFO - Initialized Binance Futures Testnet client.
+2025-06-22 00:11:39,102 - INFO - Order placed successfully: {'orderId': 4579422610, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ35ab2c03b3b671bb547b4f', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.010', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750531298139}
+2025-06-22 00:12:00,653 - INFO - Initialized Binance Futures Testnet client.
+2025-06-22 00:12:28,034 - INFO - Order placed successfully: {'orderId': 4579428149, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ8d65a544de321d3d592cc9', 'price': '65000.00', 'avgPrice': '0.00', 'origQty': '0.010', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750531347056}
+2025-06-22 00:16:13,876 - INFO - Initialized Binance Futures Testnet client.
+2025-06-22 00:16:43,738 - INFO - Order placed successfully: {'orderId': 4579452592, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJbd9bef8fe5ba92ce68225', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.010', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750531602736}
+2025-06-22 00:16:48,274 - ERROR - Order cancel failed: APIError(code=-2011): Unknown order sent.
+2025-06-22 00:16:54,410 - INFO - Account Balance: [{'accountAlias': 'fWmYfWXqmYTiAu', 'asset': 'FDUSD', 'balance': '0.00000000', 'crossWalletBalance': '0.00000000', 'crossUnPnl': '0.00000000', 'availableBalance': '0.00000000', 'maxWithdrawAmount': '0.00000000', 'marginAvailable': True, 'updateTime': 0}, {'accountAlias': 'fWmYfWXqmYTiAu', 'asset': 'BFUSD', 'balance': '0.00000000', 'crossWalletBalance': '0.00000000', 'crossUnPnl': '0.00000000', 'availableBalance': '0.00000000', 'maxWithdrawAmount': '0.00000000', 'marginAvailable': True, 'updateTime': 0}, {'accountAlias': 'fWmYfWXqmYTiAu', 'asset': 'BNB', 'balance': '0.00000000', 'crossWalletBalance': '0.00000000', 'crossUnPnl': '0.00000000', 'availableBalance': '0.00000000', 'maxWithdrawAmount': '0.00000000', 'marginAvailable': True, 'updateTime': 0}, {'accountAlias': 'fWmYfWXqmYTiAu', 'asset': 'ETH', 'balance': '0.00000000', 'crossWalletBalance': '0.00000000', 'crossUnPnl': '0.00000000', 'availableBalance': '0.00000000', 'maxWithdrawAmount': '0.00000000', 'marginAvailable': True, 'updateTime': 0}, {'accountAlias': 'fWmYfWXqmYTiAu', 'asset': 'BTC', 'balance': '0.00000000', 'crossWalletBalance': '0.00000000', 'crossUnPnl': '0.00000000', 'availableBalance': '0.00000000', 'maxWithdrawAmount': '0.00000000', 'marginAvailable': True, 'updateTime': 0}, {'accountAlias': 'fWmYfWXqmYTiAu', 'asset': 'USDT', 'balance': '14998.01682150', 'crossWalletBalance': '14998.01682150', 'crossUnPnl': '-2.99588571', 'availableBalance': '14886.86012079', 'maxWithdrawAmount': '14886.86012079', 'marginAvailable': True, 'updateTime': 1750531602736}, {'accountAlias': 'fWmYfWXqmYTiAu', 'asset': 'USDC', 'balance': '0.00000000', 'crossWalletBalance': '0.00000000', 'crossUnPnl': '0.00000000', 'availableBalance': '0.00000000', 'maxWithdrawAmount': '0.00000000', 'marginAvailable': True, 'updateTime': 0}]
+2025-06-22 00:17:03,670 - ERROR - Order cancel failed: APIError(code=-2011): Unknown order sent.
